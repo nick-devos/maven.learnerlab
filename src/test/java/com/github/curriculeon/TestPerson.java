@@ -6,32 +6,32 @@ import org.junit.Test;
 public class TestPerson {
     @Test
     public void testConstructor() {
-        //given
+        // given
         Long expectedId = 0L;
         String expectedName = "Some name";
 
-        //when
+        // when
         Person person = new Person(expectedId, expectedName);
-        String actualName = person.getName();
         Long actualId = person.getId();
+        String actualName = person.getName();
 
-        //then
+        // then
         Assert.assertEquals(expectedId, actualId);
         Assert.assertEquals(expectedName, actualName);
     }
 
     @Test
     public void testSetName() {
-        //given
+        // given
         Person person = new Person(null, null);
-        String expectedName = "Some Name";
+        String expectedName = "Some name";
         Assert.assertNotEquals(expectedName, person.getName());
 
-        //when
+        // when
         person.setName(expectedName);
         String actualName = person.getName();
 
-        //then
+        // then
         Assert.assertEquals(expectedName, actualName);
     }
 }
